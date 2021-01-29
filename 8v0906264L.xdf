@@ -1,10 +1,10 @@
-<!-- Written 01/27/2021 16:04:48 -->
+<!-- Written 01/29/2021 09:52:42 -->
 <XDFFORMAT version="1.60">
   <XDFHEADER>
     <flags>0x1</flags>
     <deftitle>Golf MK7 8V0906264L</deftitle>
     <description>Golf MK7 Sportwagen/Alltrack Simos 18.1</description>
-    <author>James Pinger</author>
+    <author>Joe Fischetti</author>
     <BASEOFFSET offset="0" subtract="0" />
     <DEFAULTS datasizeinbits="8" sigdigits="4" outputtype="1" signed="0" lsbfirst="1" float="0" />
     <REGION type="0xFFFFFFFF" startaddress="0x0" size="0x7D000" regionflags="0x0" name="Binary File" desc="This region describes the bin file edited by this XDF" />
@@ -5177,4 +5177,15 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
+  <XDFCHECKSUM uniqueid="0x5B71">
+    <title>SimosChecksum</title>
+    <REGION>
+      <pluginmoduleid>122dfe7b-b7a4-4aff-a495-cddc03e0deea</pluginmoduleid>
+      <datastart>0x0</datastart>
+      <dataend>0x128</dataend>
+      <storesizebits>0x20</storesizebits>
+      <storeaddress>0x300</storeaddress>
+      <calculationmethod>0x0</calculationmethod>
+    </REGION>
+  </XDFCHECKSUM>
 </XDFFORMAT>
