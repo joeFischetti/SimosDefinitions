@@ -1,4 +1,4 @@
-<!-- Written 01/19/2021 14:05:10 -->
+<!-- Written 02/06/2021 12:38:29 -->
 <XDFFORMAT version="1.60">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -496,7 +496,8 @@
   <XDFTABLE uniqueid="0x186D" flags="0x30">
     <title>Weight of Ambient Pressure for Boost Gauge</title>
     <description>c_fac_bop_disp_fad</description>
-    <CATEGORYMEM index="0" category="3" />
+    <CATEGORYMEM index="0" category="9" />
+    <CATEGORYMEM index="1" category="3" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x2C3B" mmedelementsizebits="8" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
@@ -622,7 +623,8 @@
   <XDFCONSTANT uniqueid="0x4DC4" flags="0x8">
     <title>Boost Gauge Max Pressure</title>
     <description>c_bop_max_disp</description>
-    <CATEGORYMEM index="0" category="3" />
+    <CATEGORYMEM index="0" category="9" />
+    <CATEGORYMEM index="1" category="3" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x3376" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <rangehigh>3000.000000</rangehigh>
     <datatype>25</datatype>
@@ -635,7 +637,8 @@
   <XDFCONSTANT uniqueid="0x125E" flags="0x8">
     <title>Boost Gauge Min Absolute Value</title>
     <description>c_bop_min_disp</description>
-    <CATEGORYMEM index="0" category="3" />
+    <CATEGORYMEM index="0" category="9" />
+    <CATEGORYMEM index="1" category="3" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x3378" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <rangehigh>3000.000000</rangehigh>
     <datatype>25</datatype>
@@ -648,7 +651,8 @@
   <XDFCONSTANT uniqueid="0x328A" flags="0x8">
     <title>Boost Gauge Min RPM</title>
     <description>c_n_min_bop_disp</description>
-    <CATEGORYMEM index="0" category="3" />
+    <CATEGORYMEM index="0" category="9" />
+    <CATEGORYMEM index="1" category="3" />
     <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x3442" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
     <rangehigh>7000.000000</rangehigh>
     <datatype>6</datatype>
@@ -2253,7 +2257,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x75DD" flags="0x30">
-    <title>MAP Limit</title>
+    <title>MAP Limit Offset Behind Air filter</title>
     <description>c_prs_im_sp_lim</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -2592,4 +2596,100 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
+  <XDFCONSTANT uniqueid="0x7F12">
+    <title>Basic filtered maximum torque</title>
+    <description>c_tq_pow_max_bas_fil_rst</description>
+    <CATEGORYMEM index="0" category="8" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x93DA" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>0</datatype>
+    <unittype>73</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*0.03125">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFTABLE uniqueid="0x7B6" flags="0x30">
+    <title>Cylinder Head Temperature Target</title>
+    <description>DATA_ThmMng.CoTE_tHdCtlSp_M_VW</description>
+    <CATEGORYMEM index="0" category="9" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x7D462" mmedelementsizebits="8" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>RPM</units>
+      <indexcount>6</indexcount>
+      <embedinfo type="1" />
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*40">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x7D344" mmedelementsizebits="16" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>%</units>
+      <indexcount>6</indexcount>
+      <embedinfo type="1" />
+      <datatype>23</datatype>
+      <unittype>67</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*0.0234375">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x7D53A" mmedelementsizebits="8" mmedrowcount="6" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>&#176;C</units>
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>143.250000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.75 - 48">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFCONSTANT uniqueid="0x42EC">
+    <title>Vehicle Speed Limit 1</title>
+    <CATEGORYMEM index="0" category="10" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x7B9EC" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>5</datatype>
+    <unittype>6</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*0.0078125">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0xD45">
+    <title>Vehicle Speed Limit 2</title>
+    <CATEGORYMEM index="0" category="10" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x7B9EE" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>5</datatype>
+    <unittype>6</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*0.0078125">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x536">
+    <title>Vehicle Speed Limit 3</title>
+    <CATEGORYMEM index="0" category="10" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x7B9F0" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>5</datatype>
+    <unittype>6</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*0.0078125">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x4910">
+    <title>Vehicle Speed Limit 4</title>
+    <CATEGORYMEM index="0" category="10" />
+    <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x7B9F2" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>5</datatype>
+    <unittype>6</unittype>
+    <DALINK index="0" />
+    <MATH equation="X*0.0078125">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
 </XDFFORMAT>
