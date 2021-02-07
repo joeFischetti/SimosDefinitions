@@ -1,4 +1,4 @@
-<!-- Written 02/07/2021 14:21:42 -->
+<!-- Written 02/07/2021 14:57:27 -->
 <XDFFORMAT version="1.60">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -2341,6 +2341,7 @@
   <XDFTABLE uniqueid="0x25025" flags="0x30">
     <title>Boost Integrator, 2400 RPM</title>
     <description>Boost Integrator, 2400 RPM</description>
+    <CATEGORYMEM index="0" category="3" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x1990C" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
@@ -2538,48 +2539,6 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x06" mmedaddress="0x1A176" mmedelementsizebits="16" mmedrowcount="8" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>3</decimalpl>
-      <min>100.000000</min>
-      <max>600.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X*0.0030517578125">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x25025" flags="0x30">
-    <title>Boost P/D, 5200 RPM</title>
-    <description>Boost P/D, 5200 RPM</description>
-    <CATEGORYMEM index="0" category="3" />
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x1990C" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>12</indexcount>
-      <decimalpl>0</decimalpl>
-      <min>1000.000000</min>
-      <embedinfo type="1" />
-      <datatype>1</datatype>
-      <unittype>1</unittype>
-      <DALINK index="0" />
-      <MATH equation="X*0.0030517578125">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x19926" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>8</indexcount>
-      <decimalpl>1</decimalpl>
-      <min>1000.000000</min>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>3</datatype>
-      <unittype>3</unittype>
-      <DALINK index="0" />
-      <MATH equation="X*0.0030517578125">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x06" mmedaddress="0x1A1D6" mmedelementsizebits="16" mmedrowcount="8" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>3</decimalpl>
       <min>100.000000</min>
       <max>600.000000</max>
@@ -4947,7 +4906,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x153B" flags="0x30">
-    <title>Minimum torque for MPI</title>
+    <title>Minimum Torque for MPI</title>
     <description>ip_tqi_thd_mplh_opp_min[5]</description>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -4963,6 +4922,7 @@
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0xC8F7" mmedelementsizebits="8" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>C</units>
       <indexcount>6</indexcount>
       <embedinfo type="1" />
       <datatype>0</datatype>
@@ -4978,6 +4938,45 @@
       <decimalpl>2</decimalpl>
       <min>0.000000</min>
       <max>600.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.03125">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x4863" flags="0x30">
+    <title>Maximum Torque for MPI</title>
+    <description>ip_tqi_thd_mplh_opp_max[5]</description>
+    <CATEGORYMEM index="0" category="1" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x669B2" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0xC8F7" mmedelementsizebits="8" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>C</units>
+      <indexcount>6</indexcount>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>15</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*0.75-48">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x06" mmedaddress="0x6A126" mmedelementsizebits="16" mmedrowcount="6" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>N m</units>
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>800.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="X*0.03125">
         <VAR id="X" />
