@@ -1,4 +1,4 @@
-<!-- Written 02/07/2021 13:38:51 -->
+<!-- Written 02/07/2021 14:21:42 -->
 <XDFFORMAT version="1.60">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -491,7 +491,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x2EEE" mmedelementsizebits="16" mmedcolcount="4" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x2EEE" mmedelementsizebits="16" mmedcolcount="4" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <indexcount>4</indexcount>
       <decimalpl>1</decimalpl>
       <min>1000.000000</min>
@@ -977,7 +977,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x32A6" mmedelementsizebits="16" mmedcolcount="6" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x32A6" mmedelementsizebits="16" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
       <decimalpl>1</decimalpl>
       <min>1000.000000</min>
@@ -2341,7 +2341,6 @@
   <XDFTABLE uniqueid="0x25025" flags="0x30">
     <title>Boost Integrator, 2400 RPM</title>
     <description>Boost Integrator, 2400 RPM</description>
-    <CATEGORYMEM index="0" category="3" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x1990C" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
@@ -2358,7 +2357,7 @@
     <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x19926" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
-      <decimalpl>1</decimalpl>
+      <decimalpl>3</decimalpl>
       <min>1000.000000</min>
       <outputtype>2</outputtype>
       <embedinfo type="1" />
