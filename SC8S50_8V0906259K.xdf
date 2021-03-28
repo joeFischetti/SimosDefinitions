@@ -1,4 +1,4 @@
-<!-- Written 01/31/2021 13:54:21 -->
+<!-- Written 02/18/2021 19:02:27 -->
 <XDFFORMAT version="1.60">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -170,7 +170,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0xD6" flags="0x30">
-    <title>Spark Modifier Combustion Mode 0</title>
+    <title>Spark Modifier Torque Index 0</title>
     <description>ip_iga_bas_cmb_mod_cor[0]</description>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -208,7 +208,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2D99" flags="0x30">
-    <title>Spark Modifier Combustion Mode 2</title>
+    <title>Spark Modifier Torque Index 2</title>
     <description>ip_iga_bas_cmb_mod_cor[2]</description>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -246,7 +246,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5C0C" flags="0x30">
-    <title>Spark Modifier Combustion Mode 4</title>
+    <title>Spark Modifier Torque Index 4</title>
     <description>ip_iga_bas_cmb_mod_cor[4]</description>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -3532,7 +3532,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7999" flags="0x30">
-    <title>Lowside Pressure Targe Constant</title>
+    <title>Lowside Pressure Target Constant</title>
     <description>PSKBKS</description>
     <CATEGORYMEM index="0" category="4" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -4322,162 +4322,6 @@
       <decimalpl>2</decimalpl>
       <min>0.000000</min>
       <max>65.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X*0.01">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x3918" flags="0x30">
-    <title>Burble Delay 1</title>
-    <description>ip_t_act_imp_comb_eng[0]</description>
-    <CATEGORYMEM index="0" category="6" />
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x5022" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <indexcount>5</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>4</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x12E1" mmedelementsizebits="8" mmedcolcount="10" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <units>Gear</units>
-      <indexcount>10</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>65</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x06" mmedaddress="0x20188" mmedelementsizebits="16" mmedrowcount="10" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <units>s</units>
-      <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>2.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X*0.01">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x76E4" flags="0x30">
-    <title>Burble Delay 2</title>
-    <description>ip_t_act_imp_comb_eng[1]</description>
-    <CATEGORYMEM index="0" category="6" />
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x5022" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <indexcount>5</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>4</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x12E1" mmedelementsizebits="8" mmedcolcount="10" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <units>Gear</units>
-      <indexcount>10</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>65</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x06" mmedaddress="0x201EC" mmedelementsizebits="16" mmedrowcount="10" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <units>s</units>
-      <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>2.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X*0.01">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x1B89" flags="0x30">
-    <title>Burble Delay 3</title>
-    <description>ip_t_act_imp_comb_eng[2]</description>
-    <CATEGORYMEM index="0" category="6" />
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x5022" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <indexcount>5</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>4</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x12E1" mmedelementsizebits="8" mmedcolcount="10" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <units>Gear</units>
-      <indexcount>10</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>65</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x06" mmedaddress="0x20250" mmedelementsizebits="16" mmedrowcount="10" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <units>s</units>
-      <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>2.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X*0.01">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x3043" flags="0x30">
-    <title>Burble Delay 4</title>
-    <description>ip_t_act_imp_comb_eng[3]</description>
-    <CATEGORYMEM index="0" category="6" />
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x5022" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <indexcount>5</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>4</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedtypeflags="0x02" mmedaddress="0x12E1" mmedelementsizebits="8" mmedcolcount="10" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <units>Gear</units>
-      <indexcount>10</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>65</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x06" mmedaddress="0x202B4" mmedelementsizebits="16" mmedrowcount="10" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <units>s</units>
-      <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>2.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="X*0.01">
         <VAR id="X" />
